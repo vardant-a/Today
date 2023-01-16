@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8D0B0129748C8000D22C36 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D0B0029748C8000D22C36 /* Reminder.swift */; };
+		0E8D0B0329748D7000D22C36 /* ReminderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D0B0229748D7000D22C36 /* ReminderCollectionViewController.swift */; };
 		0E8D0B1F29747FDE00F02707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D0B1E29747FDE00F02707 /* AppDelegate.swift */; };
 		0E8D0B2129747FDE00F02707 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D0B2029747FDE00F02707 /* SceneDelegate.swift */; };
-		0E8D0B2329747FDE00F02707 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D0B2229747FDE00F02707 /* ViewController.swift */; };
+		0E8D0B2329747FDE00F02707 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D0B2229747FDE00F02707 /* ReminderListViewController.swift */; };
 		0E8D0B2829747FDF00F02707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D0B2729747FDF00F02707 /* Assets.xcassets */; };
 		0E8D0B2B29747FDF00F02707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8D0B2929747FDF00F02707 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E8D0B0029748C8000D22C36 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		0E8D0B0229748D7000D22C36 /* ReminderCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCollectionViewController.swift; sourceTree = "<group>"; };
 		0E8D0B1B29747FDE00F02707 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8D0B1E29747FDE00F02707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E8D0B2029747FDE00F02707 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E8D0B2229747FDE00F02707 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E8D0B2229747FDE00F02707 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
 		0E8D0B2729747FDF00F02707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E8D0B2A29747FDF00F02707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E8D0B2C29747FDF00F02707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +80,8 @@
 		0E8D0B332974800C00F02707 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0E8D0B2229747FDE00F02707 /* ViewController.swift */,
+				0E8D0B2229747FDE00F02707 /* ReminderListViewController.swift */,
+				0E8D0B0229748D7000D22C36 /* ReminderCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 		0E8D0B342974802A00F02707 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0E8D0B0029748C8000D22C36 /* Reminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,9 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8D0B2329747FDE00F02707 /* ViewController.swift in Sources */,
+				0E8D0B2329747FDE00F02707 /* ReminderListViewController.swift in Sources */,
 				0E8D0B1F29747FDE00F02707 /* AppDelegate.swift in Sources */,
 				0E8D0B2129747FDE00F02707 /* SceneDelegate.swift in Sources */,
+				0E8D0B0329748D7000D22C36 /* ReminderCollectionViewController.swift in Sources */,
+				0E8D0B0129748C8000D22C36 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

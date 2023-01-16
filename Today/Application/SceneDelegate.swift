@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        let layout = UICollectionViewFlowLayout()
+        window?.rootViewController = ReminderCollectionViewController(collectionViewLayout: layout)
         window?.makeKeyAndVisible()
     }
 
