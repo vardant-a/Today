@@ -9,11 +9,6 @@ import UIKit
 
 final class ReminderCollectionViewController: UICollectionViewController {
     
-    // MARK: - Typealias
-    
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
-    typealias Shapshot = NSDiffableDataSourceSnapshot<Int, String>
-    
     // MARK: - Public Properties
     
     var dataSourse: DataSource!
@@ -23,27 +18,28 @@ final class ReminderCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
         
-        let cellRegistrator = UICollectionView.CellRegistration { (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String) in
-            let reminder = Reminder.sampleData[indexPath.item]
-            var contentCell = cell.defaultContentConfiguration()
-            
-            contentCell.text = reminder.title
-            
-            cell.contentConfiguration = contentCell
-        }
+        let cellRegistrator = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         
         dataSourse = DataSource(
             collectionView: collectionView, cellProvider: { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in
-                return collectionView.dequeueConfiguredReusableCell(using: cellRegistrator, for: indexPath, item: itemIdentifier)
+                collectionView.dequeueConfiguredReusableCell(
+                    using: cellRegistrator,
+                    for: indexPath,
+                    item: itemIdentifier
+                )
             }
         )
         
         var snapshot = Shapshot()
         snapshot.appendSections([0])
-        snapshot.appendItems(Reminder.sampleData.map( { $0.title } ))
+        snapshot.appendItems(
+            Reminder.sampleData.map( { $0.title } )
+        )
         dataSourse.apply(snapshot)
         
         collectionView.dataSource = dataSourse
